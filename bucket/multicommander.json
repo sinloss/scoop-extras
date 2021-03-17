@@ -1,5 +1,5 @@
 {
-    "version": "9.5.0.2570",
+    "version": "11.0.0.2770",
     "description": "A multi-tabbed file manager and is an alternative to the standard Windows Explorer",
     "homepage": "http://multicommander.com/",
     "license": {
@@ -8,20 +8,14 @@
     },
     "architecture": {
         "64bit": {
-            "url": "http://multicommander.com/files/updates/MultiCommander_x64_Portable_(9.5.0.2570).zip",
-            "hash": "sha1:9780e5d12b62b71492028cb60f653e8d8bdde0cc"
+            "url": "http://multicommander.com/files/updates/MultiCommander_x64_Portable_(11.0.0.2770).zip",
+            "hash": "8b31ed9d7cb6072e43a2c90e5a960536a4cdba0b3a8105e28bdfffbd8a40bc6a"
         },
         "32bit": {
-            "url": "http://multicommander.com/files/updates/MultiCommander_win32_Portable_(9.5.0.2570).zip",
-            "hash": "sha1:4824b5c259c3cff7f3aa39e1be66b8f0c158f881"
+            "url": "http://multicommander.com/files/updates/MultiCommander_win32_Portable_(11.0.0.2770).zip",
+            "hash": "92150e134337fa4cf8a0b581a25b62fd73f6acfda482eef1b6aedd742c8fe571"
         }
     },
-    "persist": [
-        "Config",
-        "SessionConfig",
-        "Extensions",
-        "UserData"
-    ],
     "bin": "MultiCommander.exe",
     "shortcuts": [
         [
@@ -29,9 +23,15 @@
             "Multi Commander"
         ]
     ],
+    "persist": [
+        "Config",
+        "SessionConfig",
+        "Extensions",
+        "UserData"
+    ],
     "checkver": {
-        "url": "http://multicommander.com/downloads",
-        "regex": "\\(([\\d\\.]+)\\)\\.zip"
+        "url": "http://multicommander.com/updates/version.xml",
+        "xpath": "/updates/multicommander/stable/@version"
     },
     "autoupdate": {
         "architecture": {
@@ -41,10 +41,6 @@
             "32bit": {
                 "url": "http://multicommander.com/files/updates/MultiCommander_win32_Portable_($version).zip"
             }
-        },
-        "hash": {
-            "url": "http://multicommander.com/downloads",
-            "find": "$basename.+([A-Fa-f\\d]{40})"
         }
     }
 }

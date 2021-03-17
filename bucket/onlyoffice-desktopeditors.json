@@ -1,5 +1,5 @@
 {
-    "version": "5.4.2",
+    "version": "6.1.0.90",
     "description": "Office suite that combines text, spreadsheet and presentation editors allowing to create, view and edit documents.",
     "homepage": "https://www.onlyoffice.com/apps.aspx",
     "license": "AGPL-3.0-only",
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/ONLYOFFICE-DesktopEditors-5.4.2/DesktopEditors_x64.exe",
-            "hash": "861e79f872759b42d724dc17effa598de51b321cad861b3993767966caf8edb8"
+            "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v6.1.0/ONLYOFFICE_DesktopEditors_6.1.0.90_x64.exe",
+            "hash": "920813241d6d9d2e346f2c0bffc8ee3efe279a0bc8db3c1073ad52022d4c00db"
         },
         "32bit": {
-            "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/ONLYOFFICE-DesktopEditors-5.4.2/DesktopEditors_x86.exe",
-            "hash": "871cac65e4443d53972d47b1d2a62be03f980bf20728037bf6a1a2a3322a33eb"
+            "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v6.1.0/ONLYOFFICE_DesktopEditors_6.1.0.90_x86.exe",
+            "hash": "57e315f5214bfccc0176bea2d59863ae7b1745c3c1e15e0fb0ba2533215303a6"
         }
     },
     "innosetup": true,
-    "post_install": "Remove-Item \"$dir\\vcredist_*exe\"",
+    "pre_install": "Remove-Item \"$dir\\vcredist_*exe\"",
     "bin": "DesktopEditors.exe",
     "shortcuts": [
         [
@@ -27,15 +27,15 @@
     ],
     "checkver": {
         "github": "https://github.com/ONLYOFFICE/DesktopEditors",
-        "regex": "tree/ONLYOFFICE-DesktopEditors-([\\d.-]+)"
+        "regex": "DesktopEditors_([\\d.]+)_x\\d"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/ONLYOFFICE-DesktopEditors-$version/DesktopEditors_x64.exe"
+                "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v$matchHead/ONLYOFFICE_DesktopEditors_$version_x64.exe"
             },
             "32bit": {
-                "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/ONLYOFFICE-DesktopEditors-$version/DesktopEditors_x86.exe"
+                "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v$matchHead/ONLYOFFICE_DesktopEditors_$version_x86.exe"
             }
         }
     }

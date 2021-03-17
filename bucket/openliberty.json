@@ -1,13 +1,14 @@
 {
-    "homepage": "https://openliberty.io/",
+    "version": "21.0.0.2",
     "description": "Server runtime available to JavaTM developers",
+    "homepage": "https://openliberty.io/",
     "license": "EPL-1.0",
-    "version": "19.0.0.12",
-    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/2019-11-20_0300/openliberty-19.0.0.12.zip",
-    "hash": "b292f7888575b998e9183eeb99e89db4e85334ec59abb98ebe24a2ae26b25ece",
+    "notes": "server.bat is aliased to wlp, client.bat is aliased to wlp-client",
     "suggest": {
         "JDK": "java/openjdk"
     },
+    "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/2021-02-09-1100/openliberty-21.0.0.2.zip",
+    "hash": "1bbce6c1e3c729364d260e5a0f754ccb3cf23480a4f88b7109d15ebcd98fb93d",
     "extract_dir": "wlp",
     "bin": [
         "bin\\binaryLog.bat",
@@ -29,11 +30,10 @@
     "persist": "usr",
     "checkver": {
         "url": "https://openliberty.io/api/builds/data",
-        "jp": "$.latest_releases.runtime.driver_location",
-        "re": "/(?<build>[\\d_-]+)/openliberty-([\\d.]+).zip"
+        "jsonpath": "$.latest_releases.runtime.driver_location",
+        "regex": "/(?<build>[\\d_-]+)/openliberty-([\\d.]+)\\.zip"
     },
     "autoupdate": {
         "url": "https://public.dhe.ibm.com/ibmdl/export/pub/software/openliberty/runtime/release/$matchBuild/openliberty-$version.zip"
-    },
-    "notes": "server.bat is aliased to wlp, client.bat is aliased to wlp-client"
+    }
 }

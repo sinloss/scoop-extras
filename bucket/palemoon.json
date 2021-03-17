@@ -1,18 +1,19 @@
 {
+    "version": "29.1.0",
     "description": "Mozilla-derived web browser focusing on efficiency and customization",
     "homepage": "https://www.palemoon.org",
-    "version": "28.8.1",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://rm-eu.palemoon.org/release/palemoon-28.8.1.win64.7z",
-            "hash": "35dca8dfc95a5c6555ceb1a04b2361b62bf18087e27910da9cf0c97ace1b7334"
+            "url": "https://rm-eu.palemoon.org/release/palemoon-29.1.0.win64.7z",
+            "hash": "b413f71d122d1149718163979bac729e5d64e901eecc07093cce2d63dfda68a6"
         },
         "32bit": {
-            "url": "https://rm-eu.palemoon.org/release/palemoon-28.8.1.win32.7z",
-            "hash": "c9dba073b28e6a52641dfd8fed087af3bcede877061234f07d7519191d794920"
+            "url": "https://rm-eu.palemoon.org/release/palemoon-29.1.0.win32.7z",
+            "hash": "a5cd17093246fe1dc641adb16da42bb00bfde36459852494edd3196b2f161f55"
         }
     },
+    "extract_dir": "palemoon",
     "bin": "palemoon.exe",
     "shortcuts": [
         [
@@ -20,7 +21,6 @@
             "Pale Moon"
         ]
     ],
-    "extract_dir": "palemoon",
     "checkver": {
         "url": "https://www.palemoon.org/download.shtml",
         "regex": "Hashes for release ([\\d.]+)"

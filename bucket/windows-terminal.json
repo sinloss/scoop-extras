@@ -1,13 +1,13 @@
 {
-    "version": "0.7.3451.0",
+    "version": "1.6.10571.0",
     "description": "The new Windows Terminal, and the original Windows console host - all in the same place!",
     "homepage": "https://github.com/microsoft/terminal",
     "license": "MIT",
     "suggest": {
         "vcredist": "extras/vcredist2019"
     },
-    "url": "https://github.com/microsoft/terminal/releases/download/v0.7.3451.0/Microsoft.WindowsTerminal_0.7.3451.0_8wekyb3d8bbwe.msixbundle#/dl.7z",
-    "hash": "2bfbc43906448179afe250954a38714662693456b10a57a51d3302197422a2b6",
+    "url": "https://github.com/microsoft/terminal/releases/download/v1.6.10571.0/Microsoft.WindowsTerminal_1.6.10571.0_8wekyb3d8bbwe.msixbundle#/dl.7z",
+    "hash": "092aa89b1881e058d31b1a8d88f31bb298b5810afbba25c5cb341cfa4904d843",
     "architecture": {
         "64bit": {
             "pre_install": "Get-ChildItem \"$dir\" -Exclude '*x64.msix' | Remove-Item -Force -Recurse"
@@ -19,16 +19,14 @@
     "installer": {
         "script": [
             "$winVer = [Environment]::OSVersion.Version",
-            "if (($winver.Major -lt '10') -or ($winVer.Build -lt 18362)) { error 'At least Windows 10 18362 is required.'; break }",
-            "Get-ChildItem \"$dir\" '*.msix' | Select-Object -ExpandProperty Fullname | Expand-7zipArchive -DestinationPath \"$dir\" -Removal"
+            "if (($winver.Major -lt '10') -or ($winVer.Build -lt 18362)) { throw 'At least Windows 10 18362 is required.' }",
+            "Get-ChildItem \"$dir\" '*.msix' | Select-Object -ExpandProperty Fullname | Expand-7zipArchive -DestinationPath \"$dir\" -Removal",
+            "Get-ChildItem \"$dir\\ProfileIcons\" '*.png' | Rename-Item -NewName { $_.Name.Replace('%7B', '{').Replace('%7D', '}') }"
         ]
     },
     "bin": [
         "WindowsTerminal.exe",
-        [
-            "WindowsTerminal.exe",
-            "wt"
-        ]
+        "wt.exe"
     ],
     "shortcuts": [
         [
@@ -36,10 +34,7 @@
             "Windows Terminal"
         ]
     ],
-    "checkver": {
-        "url": "https://github.com/microsoft/terminal/releases",
-        "regex": "WindowsTerminal_([\\d.]+)_8wekyb3d8bbwe\\.msixbundle"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/microsoft/terminal/releases/download/v$version/Microsoft.WindowsTerminal_$version_8wekyb3d8bbwe.msixbundle#/dl.7z"
     }

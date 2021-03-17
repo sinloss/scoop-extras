@@ -1,22 +1,24 @@
 {
-    "version": "0.21.0",
-    "description": "The command line client for IBM Cloud.",
-    "homepage": "https://github.com/IBM-Bluemix/bluemix-cli-release",
+    "version": "1.3.0",
+    "description": "The command line client for IBM Cloud",
+    "homepage": "https://github.com/IBM-Cloud/ibm-cloud-cli-release",
     "license": {
         "identifier": "Proprietary",
         "url": "https://console.ng.bluemix.net/docs/navigation/notices.html"
     },
+    "notes": "Deprecated. Use 'main/ibmcloud-cli' instead",
     "architecture": {
         "64bit": {
-            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.21.0/win64/archive#/dl.zip",
-            "hash": "sha1:d5794e5a5ecd5cea4176f283e8bc14b6a8e64c30"
+            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/1.3.0/win64/archive#/dl.zip",
+            "hash": "sha1:eb3c42f3ea5d4077ff9313c149b081f981d6a8db"
         },
         "32bit": {
-            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/0.21.0/win32/archive#/dl.zip",
-            "hash": "sha1:f782154d32270ad8782cc73fbc9a86de51f89447"
+            "url": "https://clis.ng.bluemix.net/download/bluemix-cli/1.3.0/win32/archive#/dl.zip",
+            "hash": "sha1:10654d3aabf05fee83c07c387fa0cdcfd7a75f5a"
         }
     },
     "extract_dir": "IBM_Cloud_CLI",
+    "post_install": "ibmcloud plugin update --all",
     "bin": [
         "ibmcloud.exe",
         [
@@ -32,20 +34,5 @@
     "env_set": {
         "IBMCLOUD_HOME": "$dir\\config"
     },
-    "persist": "config",
-    "post_install": "ibmcloud plugin update --all",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://clis.ng.bluemix.net/download/bluemix-cli/$version/win64/archive#/dl.zip"
-            },
-            "32bit": {
-                "url": "https://clis.ng.bluemix.net/download/bluemix-cli/$version/win32/archive#/dl.zip"
-            }
-        },
-        "hash": {
-            "url": "$url/checksum"
-        }
-    }
+    "persist": "config"
 }

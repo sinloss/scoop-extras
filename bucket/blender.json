@@ -1,13 +1,13 @@
 {
-    "version": "2.81a",
+    "version": "2.92.0",
     "description": "3D creation suite",
     "homepage": "https://www.blender.org",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://download.blender.org/release/Blender2.81/blender-2.81a-windows64.zip",
-            "hash": "87355b0a81d48ea336948294b9da8670eaae73667fae028e9a64cbb4104ceea1",
-            "extract_dir": "blender-2.81a-windows64"
+            "url": "https://download.blender.org/release/Blender2.92/blender-2.92.0-windows64.zip",
+            "hash": "5ea980be32819e7cf68ecc53ee117aa1ad7da3cb191c8ff3ff3d776574aa3eb8",
+            "extract_dir": "blender-2.92.0-windows64"
         }
     },
     "bin": "blender.exe",
@@ -24,12 +24,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.blender.org/release/Blender$matchHead/blender-$version-windows64.zip",
+                "url": "https://download.blender.org/release/Blender$majorVersion.$minorVersion/blender-$version-windows64.zip",
                 "extract_dir": "blender-$version-windows64"
             }
         },
         "hash": {
-            "url": "$baseurl/release$cleanVersion.sha256sum"
+            "url": "$baseurl/blender-$version.sha256"
         }
     }
 }

@@ -1,0 +1,39 @@
+{
+    "version": "1.5.0",
+    "description": "End-to-end encrypted messenger",
+    "homepage": "https://getsession.org",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.5.0/session-desktop-win-1.5.0.exe#/dl.7z",
+            "hash": "sha512:7943b754515107372e7f6d1a822fb905a245ea557e2fa0a6225dccbadad64a3ff1a9e79a2cd5917dd573494bd308a3bc7040da1e0e63508d2e9cc253e0263bf1",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse"
+                ]
+            }
+        }
+    },
+    "bin": "Session.exe",
+    "shortcuts": [
+        [
+            "Session.exe",
+            "Session"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/oxen-io/session-desktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/oxen-io/session-desktop/releases/download/v$version/session-desktop-win-$version.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "sha512:\\s+$base64"
+        }
+    }
+}

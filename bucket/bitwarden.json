@@ -1,8 +1,18 @@
 {
-    "homepage": "https://bitwarden.com/",
-    "description": "Open source password management solutions for individuals, teams, and business organizations.",
+    "version": "1.25.0",
+    "description": "Password management solutions for individuals, teams, and business organizations",
+    "homepage": "https://bitwarden.com",
     "license": "GPL-3.0-or-later",
-    "version": "1.16.6",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/bitwarden/desktop/releases/download/v1.25.0/bitwarden-1.25.0-x64.nsis.7z",
+            "hash": "sha512:07903b84747949f97aeb45096f7e733a698289d3df527906fd28f967d4b5de2b73d97fe389c165e8f49129398278625ec9774694e6915833aba4e56ceccbf29f"
+        },
+        "32bit": {
+            "url": "https://github.com/bitwarden/desktop/releases/download/v1.25.0/bitwarden-1.25.0-ia32.nsis.7z",
+            "hash": "sha512:087728bc0ecf8735601b8b404204e8b5257acb1de92d269be88a2f6c491ab6fc075258528fbfb9e725ba2d9f10241ee9d9596ecde781c39feac6a48dc678451f"
+        }
+    },
     "bin": "Bitwarden.exe",
     "shortcuts": [
         [
@@ -10,16 +20,6 @@
             "Bitwarden"
         ]
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/bitwarden/desktop/releases/download/v1.16.6/bitwarden-1.16.6-x64.nsis.7z",
-            "hash": "sha512:baf9b4061ccdb48613614cd61f707a548056bc26e47de72553c6c7036241f2f71975da719bfff9bbee4cd0eb8bcee86a04fa8c2ab59f3d0ff0a6dd94185c2116"
-        },
-        "32bit": {
-            "url": "https://github.com/bitwarden/desktop/releases/download/v1.16.6/bitwarden-1.16.6-ia32.nsis.7z",
-            "hash": "sha512:d8328653ba1f5d18b8cf31598fe698e0d8ece0727abc0511386c69aa6cf600ffc5057b08ef2aa0824eef2f7b3856fface589cc2525b554ac98c6a4f520f0dfc4"
-        }
-    },
     "checkver": {
         "github": "https://github.com/bitwarden/desktop"
     },

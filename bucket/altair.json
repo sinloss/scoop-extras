@@ -1,12 +1,12 @@
 {
-    "homepage": "https://altair.sirmuel.design/",
-    "version": "2.4.3",
+    "version": "3.2.2",
+    "description": "Feature-rich GraphQL Client",
+    "homepage": "https://altair.sirmuel.design",
     "license": "MIT",
-    "description": "Beautiful feature-rich GraphQL Client.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/imolorhe/altair/releases/download/v2.4.3/altair_2.4.3_win.exe#/dl.7z",
-            "hash": "sha512:d76c022ef26667af97372c3cf2283cb848f5efdcba8d8898092436db353c7461d67b64985eae6caa2a066084efc15e86d8aa82d5efaa3c5e9fdb655baa2fe509",
+            "url": "https://github.com/imolorhe/altair/releases/download/v3.2.2/altair_3.2.2_win.exe#/dl.7z",
+            "hash": "sha512:2861afe37f88df14b8d2bdd30064f24c77de474075ed78bf546548bab92ac77df903712d3ee69e014deb721388fa00d2bc1161c2395e8c7f3cffd9ce95b08151",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -25,10 +25,14 @@
         "github": "https://github.com/imolorhe/altair"
     },
     "autoupdate": {
-        "url": "https://github.com/imolorhe/altair/releases/download/v$version/altair_$version_win.exe#/dl.7z",
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "sha512: $base64"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/imolorhe/altair/releases/download/v$version/altair_$version_win.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512: $base64"
+                }
+            }
         }
     }
 }

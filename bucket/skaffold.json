@@ -1,27 +1,22 @@
 {
-    "homepage": "https://github.com/GoogleCloudPlatform/skaffold",
+    "version": "1.20.0",
     "description": "A command line tool that facilitates continuous development for Kubernetes applications.",
+    "homepage": "https://skaffold.dev",
     "license": "Apache-2.0",
-    "version": "1.1.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/GoogleCloudPlatform/skaffold/releases/download/v1.1.0/skaffold-windows-amd64.exe",
-            "hash": "5d6e84274afefd69ce4b7a0ade33af01934f3f010f31418a5107dfaf065c9558"
+            "url": "https://github.com/GoogleCloudPlatform/skaffold/releases/download/v1.20.0/skaffold-windows-amd64.exe#/skaffold.exe",
+            "hash": "b87d49fbc8819805a7698fef8e2c280ba779450f66dc8e17fdfb7f3a3dc696f1"
         }
     },
-    "bin": [
-        [
-            "skaffold-windows-amd64.exe",
-            "skaffold"
-        ]
-    ],
+    "bin": "skaffold.exe",
     "checkver": {
         "github": "https://github.com/GoogleCloudPlatform/skaffold"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/GoogleCloudPlatform/skaffold/releases/download/v$version/skaffold-windows-amd64.exe",
+                "url": "https://github.com/GoogleCloudPlatform/skaffold/releases/download/v$version/skaffold-windows-amd64.exe#/skaffold.exe",
                 "hash": {
                     "url": "$url.sha256"
                 }

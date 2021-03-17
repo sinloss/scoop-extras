@@ -1,18 +1,19 @@
 {
-    "version": "10.3",
+    "version": "11.2",
     "description": "See and edit data and structures from computers running one of the database systems MariaDB, MySQL, Microsoft SQL or PostgreSQL.",
-    "license": "GPL-2.0-only",
     "homepage": "https://www.heidisql.com/",
+    "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://www.heidisql.com/downloads/releases/HeidiSQL_10.3_64_Portable.zip",
-            "hash": "189cd605802516eda1f9aca5f8f3fd6a36fc84d680ac63f38bb85068749eb7b0"
+            "url": "https://www.heidisql.com/downloads/releases/HeidiSQL_11.2_64_Portable.zip",
+            "hash": "070ae82cc1adc3f856d0bedbd49490ef92503c6f9dd1343a33f99d62f8ddafb8"
         },
         "32bit": {
-            "url": "https://www.heidisql.com/downloads/releases/HeidiSQL_10.3_32_Portable.zip",
-            "hash": "146b92cd31822ad0930b398531452588c87f09f2445bff5782fe9e4f9cfc6d52"
+            "url": "https://www.heidisql.com/downloads/releases/HeidiSQL_11.2_32_Portable.zip",
+            "hash": "5c5ae203fb44e6453b69e57108717cc214424a8b4ac8285e138092fa484a4eb2"
         }
     },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\portable_settings.txt\")) { New-Item \"$dir\\portable_settings.txt\" | Out-Null }",
     "bin": "heidisql.exe",
     "shortcuts": [
         [
@@ -20,15 +21,6 @@
             "HeidiSQL"
         ]
     ],
-    "installer": {
-        "script": [
-            "$FILE = 'portable_settings.txt'",
-            "if (!(Test-Path \"$persist_dir\\$FILE\")) {",
-            "    Write-Host 'No' $FILE 'exists. Creating.' -f Yellow",
-            "    New-Item \"$dir\\$FILE\" -Type File | Out-Null",
-            "}"
-        ]
-    },
     "persist": "portable_settings.txt",
     "checkver": {
         "url": "https://www.heidisql.com/download.php",

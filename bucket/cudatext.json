@@ -1,16 +1,16 @@
 {
+    "version": "1.129.3.0",
+    "description": "Text editor",
     "homepage": "http://uvviewsoft.com/cudatext/",
-    "version": "1.93.0.3",
     "license": "MPL-2.0",
-    "description": "Cross-platform text editor",
     "architecture": {
         "64bit": {
-            "url": "https://www.fosshub.com/CudaText.html/cudatext-win-x64-1.93.0.3.zip",
-            "hash": "7d038ce2e164cb3e18c6f38c2ad0cb0c9d21514cd39323596122ba6289f799ff"
+            "url": "https://www.fosshub.com/CudaText.html/cudatext-win-x64-1.129.3.0.zip",
+            "hash": "c7b503160935706f2d3472da370a0f7ecd698d2d74fa8d101d3d05a9e70b35c2"
         },
         "32bit": {
-            "url": "https://www.fosshub.com/CudaText.html/cudatext-win-x32-1.93.0.3.zip",
-            "hash": "0f0d800ec5665f625de80d0283ec796d81e2b6c28b9b08ae3572c40fb2324bd1"
+            "url": "https://www.fosshub.com/CudaText.html/cudatext-win-x32-1.129.3.0.zip",
+            "hash": "ecace4f484fefa77b92ce59e14e350794441f2b1e96b34476b015fda9727117a"
         }
     },
     "bin": "cudatext.exe",
@@ -23,7 +23,7 @@
     "persist": "settings",
     "checkver": {
         "url": "https://www.fosshub.com/CudaText.html",
-        "regex": "(?sm)>win x64<.*?softwareVersion\">([\\d.]+)"
+        "regex": "cudatext-win-x64-([\\d.]+)\\.zip"
     },
     "autoupdate": {
         "architecture": {

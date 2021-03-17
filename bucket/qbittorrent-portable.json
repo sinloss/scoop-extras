@@ -1,16 +1,16 @@
 {
+    "version": "4.3.3",
+    "description": "Free and reliable P2P Bittorent client",
     "homepage": "https://www.qbittorrent.org",
     "license": "GPL-2.0-only",
-    "version": "4.2.1",
-    "description": "Free and reliable P2P Bittorent client",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-4.2.1/qbittorrent_4.2.1_x64_setup.exe#/dl.7z",
-            "hash": "f826a56d9deca1d673c64e36e7070f01b02de842e0a627b2f12bf28d864fb061"
+            "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-4.3.3/qbittorrent_4.3.3_x64_setup.exe#/dl.7z",
+            "hash": "b5c0902db1e36baaf42a26dcc4ee517cefbd46098b0fc2a05578c1c24437a404"
         },
         "32bit": {
-            "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-4.2.1/qbittorrent_4.2.1_setup.exe#/dl.7z",
-            "hash": "6fd8ae6bb54314f9de01bc4427d0da7e3a1c886adb802b679db9c1abc4ef9b94"
+            "url": "https://downloads.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-4.3.3/qbittorrent_4.3.3_setup.exe#/dl.7z",
+            "hash": "09bb3f7b020b1bb01097fdc189fdc877e2951bf57133d62466dfd903ad8b9afe"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst.exe\" -Recurse",

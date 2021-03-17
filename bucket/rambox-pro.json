@@ -1,28 +1,22 @@
 {
-    "version": "1.2.2",
-    "description": "Tool for organizing web apps into one application with rich features.",
-    "homepage": "https://rambox.pro/",
+    "version": "1.5.0",
+    "description": "Tool for organizing web apps into one application with rich features",
+    "homepage": "https://rambox.pro",
     "license": {
         "identifier": "Proprietary",
         "url": "https://rambox.pro/#eula"
     },
-    "url": "https://github.com/ramboxapp/download/releases/download/v1.2.2/RamboxPro-1.2.2-win.exe#/cosi.7z",
-    "hash": "sha512:ac16ed5420a3cf3f463490769623782cbc78731aff33dfb1592ae7d35e7a66f360f614f114da3ade46318fc53f6c43df02b18e46cddb6fd3f9b38b3e2357f1bf",
-    "extract_dir": "$PLUGINSDIR",
-    "pre_install": "Get-ChildItem \"$dir\" -Exclude 'app-64.7z', 'app-32.7z' | Remove-Item -Force -Recurse",
+    "url": "https://github.com/ramboxapp/download/releases/download/v1.5.0/RamboxPro-1.5.0-win.exe#/cosi.7z",
+    "hash": "sha512:e39afb0aef8ea29e516a529e4a7e7cad393290bc2af28f1c83acb3c566cf9a710dd070b5ba6be9a215a6d398e7592e0da5967a5cc5ec36f71f0c99ce3002f902",
     "architecture": {
         "64bit": {
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\app-64.7z\""
-            }
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
         },
         "32bit": {
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\app-32.7z\""
-            }
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
         }
     },
-    "post_install": "Remove-Item \"$dir\\app-64.7z\", \"$dir\\app-32.7z\"",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Recurse",
     "shortcuts": [
         [
             "RamboxPro.exe",
@@ -30,7 +24,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/ramboxapp/download/"
+        "github": "https://github.com/ramboxapp/download"
     },
     "autoupdate": {
         "url": "https://github.com/ramboxapp/download/releases/download/v$version/RamboxPro-$version-win.exe#/cosi.7z",

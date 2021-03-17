@@ -1,13 +1,13 @@
 {
-    "version": "2019.4.102",
+    "version": "2020.4.35",
     "description": "Interactive source code explorer",
     "homepage": "https://www.sourcetrail.com",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CoatiSoftware/Sourcetrail/releases/download/2019.4.102/Sourcetrail_2019_4_102_Windows_64bit_Portable.zip",
-            "hash": "308c756ed4d2751e6e240c24a09828b4d1aea4a83286cbee5a15ebc40bb28523",
-            "extract_dir": "Sourcetrail_2019_4_102_64bit_Portable\\Sourcetrail_2019_4_102_64bit"
+            "url": "https://github.com/CoatiSoftware/Sourcetrail/releases/download/2020.4.35/Sourcetrail_2020_4_35_Windows_64bit_Portable.zip",
+            "hash": "a068df47d5394f1085302343073d4099ce2dd8dcd492d187473e59de260b9387",
+            "extract_dir": "Sourcetrail_2020_4_35_64bit_Portable\\Sourcetrail_2020_4_35_64bit"
         }
     },
     "bin": "Sourcetrail.exe",

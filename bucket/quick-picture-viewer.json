@@ -1,0 +1,22 @@
+{
+    "version": "3.1.0",
+    "description": "A lightweight, versatile desktop photo viewer",
+    "homepage": "https://moduleart.github.io/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/ModuleArt/quick-picture-viewer/releases/download/v3.1.0/QuickPictureViewer-Setup.exe",
+    "hash": "b2be0435287f92c556f568883af81fd61533b671aaa9bb969e2efb39f9d9babf",
+    "innosetup": true,
+    "bin": "quick-picture-viewer.exe",
+    "shortcuts": [
+        [
+            "quick-picture-viewer.exe",
+            "Quick Picture Viewer"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ModuleArt/quick-picture-viewer"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ModuleArt/quick-picture-viewer/releases/download/v$version/QuickPictureViewer-Setup.exe"
+    }
+}

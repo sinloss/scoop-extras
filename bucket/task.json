@@ -1,16 +1,16 @@
 {
-    "homepage": "https://taskfile.org",
+    "version": "3.2.2",
     "description": "A task runner / build tool that aims to be simpler and easier to use",
+    "homepage": "https://taskfile.org",
     "license": "MIT",
-    "version": "2.8.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/go-task/task/releases/download/v2.8.0/task_windows_amd64.zip",
-            "hash": "207a383c5a2311252f0332ea2125b07538ef6dd03b49c9ed5ec48bcd505815df"
+            "url": "https://github.com/go-task/task/releases/download/v3.2.2/task_windows_amd64.zip",
+            "hash": "99d3af99b527a6d4740d9926a559fcec9e1a073f9817225325087f15368e35b3"
         },
         "32bit": {
-            "url": "https://github.com/go-task/task/releases/download/v2.8.0/task_windows_386.zip",
-            "hash": "cd81fac220ca2b6f609470ede9430c53abdb25c8b6c87f017a86c420f2653f24"
+            "url": "https://github.com/go-task/task/releases/download/v3.2.2/task_windows_386.zip",
+            "hash": "ad06359bd4c24d0ef236fe186467c90417ade9fbcc5bbf2683be66d08ca77b94"
         }
     },
     "bin": "task.exe",

@@ -1,12 +1,19 @@
 {
-    "version": "2019-12-11",
-    "homepage": "http://euler-math-toolbox.de",
+    "version": "2021-02-17",
     "description": "A powerful math program combining numerical and symbolic tools (using the computer algebra system Maxima).",
+    "homepage": "http://euler-math-toolbox.de",
     "license": "GPL-3.0-or-later",
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ],
+        "POV-Ray": "extras/pov-ray"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/eumat/Installer/EulerSetup-64_2019-12-11.exe",
-            "hash": "sha1:9d9e7186fee97efa82c936e43932723b83b44334",
+            "url": "https://downloads.sourceforge.net/project/eumat/Installer/EulerSetup-64_2021-02-17.exe",
+            "hash": "sha1:3a226e40d03fba5aa4c85d3389df7e3a65772764",
             "bin": [
                 "euler64.exe",
                 [
@@ -45,12 +52,5 @@
                 "url": "https://downloads.sourceforge.net/project/eumat/Installer/EulerSetup-64_$version.exe"
             }
         }
-    },
-    "suggest": {
-        "JDK": [
-            "java/oraclejdk",
-            "java/openjdk"
-        ],
-        "POV-Ray": "extras/pov-ray"
     }
 }

@@ -1,19 +1,15 @@
 {
-    "version": "2.1.17",
-    "description": "Powerful, intelligent flash cards.",
-    "homepage": "https://apps.ankiweb.net/",
+    "version": "2.1.42",
+    "description": "Powerful and intelligent flash cards",
+    "homepage": "https://apps.ankiweb.net",
     "license": "AGPL-3.0-only",
     "suggest": {
         "vcredist": "extras/vcredist2008"
     },
     "architecture": {
         "64bit": {
-            "url": "https://apps.ankiweb.net/downloads/current/anki-2.1.17-windows.exe#/dl.7z",
-            "hash": "749f43f9062f5344a703b13e0067781c17c2a5f03fb7104a811eb2b9d27d80b4"
-        },
-        "32bit": {
-            "url": "https://apps.ankiweb.net/downloads/current/anki-2.1.17-windows-alternate.exe#/dl.7z",
-            "hash": "4b519f557dfa62d7ad96161c461b794ddf04f9371812316807a3c860a2e017d2"
+            "url": "https://github.com/ankitects/anki/releases/download/2.1.42/anki-2.1.42-windows.exe#/dl.7z",
+            "hash": "0dd3188999bc45abd2fb357a040cf0951f2b308e22109f1ffc85f6a23c5e3cef"
         }
     },
     "pre_install": [
@@ -39,16 +35,13 @@
     ],
     "persist": "data",
     "checkver": {
-        "url": "https://apps.ankiweb.net/docs/changes.html",
-        "regex": "Changes in ([\\d.]+)"
+        "url": "https://github.com/ankitects/anki/releases",
+        "regex": "anki-([\\d.]+)-windows\\.exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://apps.ankiweb.net/downloads/current/anki-$version-windows.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://apps.ankiweb.net/downloads/current/anki-$version-windows-alternate.exe#/dl.7z"
+                "url": "https://github.com/ankitects/anki/releases/download/$version/anki-$version-windows.exe#/dl.7z"
             }
         },
         "hash": {

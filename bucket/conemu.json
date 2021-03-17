@@ -1,14 +1,10 @@
 {
-    "homepage": "https://conemu.github.io/",
-    "version": "19.10.12",
+    "version": "21.03.14",
     "description": "Customizable Windows terminal with tabs, splits, quake-style, hotkeys and more.",
+    "homepage": "https://conemu.github.io/",
     "license": "BSD-3-Clause",
-    "url": "https://github.com/Maximus5/ConEmu/releases/download/v19.10.12/ConEmuPack.191012.7z",
-    "hash": "63100f7fdd29fdaab826afd460abf0cc879ff1166fabe3c68b35eba61a3f4835",
-    "bin": [
-        "ConEmu.exe",
-        "ConEmu64.exe"
-    ],
+    "url": "https://github.com/Maximus5/ConEmu/releases/download/v21.03.14/ConEmuPack.210314.7z",
+    "hash": "3e453dc0a625b283cf2f291a256671baffca077de8ae8b66b44c7c9d1edb3133",
     "pre_install": [
         "$xml = \"$dir\\ConEmu\\ConEmu.xml\"",
         "if(!(Test-Path \"$xml\")) {",
@@ -22,6 +18,10 @@
         "    }",
         "    Set-Content $xml $cont -Encoding Ascii -Force",
         "}"
+    ],
+    "bin": [
+        "ConEmu.exe",
+        "ConEmu64.exe"
     ],
     "shortcuts": [
         [

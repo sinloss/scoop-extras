@@ -1,21 +1,21 @@
 {
-    "homepage": "https://www.scintilla.org/SciTE.html",
-    "version": "4.2.3",
-    "license": "HPND",
+    "version": "5.0.0",
     "description": "SCIntilla based Text Editor",
+    "homepage": "https://www.scintilla.org/SciTE.html",
+    "license": "HPND",
     "architecture": {
         "64bit": {
-            "url": "https://www.scintilla.org/Sc423.exe#/Sc1.exe",
-            "hash": "6857123410749410fc3ea5e11c9c8f341134283f48b1187275008c682cf994d0",
-            "bin": "Sc1.exe",
-            "shortcuts": [
-                [
-                    "Sc1.exe",
-                    "Sc1"
-                ]
-            ]
+            "url": "https://www.scintilla.org/Sc500.exe#/Sc1.exe",
+            "hash": "bddc1a5cfa01468773a4ed1d2e0e70a72d65a73ec7e4ef5838828b677ed2a5a7"
         }
     },
+    "bin": "Sc1.exe",
+    "shortcuts": [
+        [
+            "Sc1.exe",
+            "Sc1"
+        ]
+    ],
     "checkver": "Release version ([\\d.]+)",
     "autoupdate": {
         "url": "https://www.scintilla.org/Sc$cleanVersion.exe#/Sc1.exe"

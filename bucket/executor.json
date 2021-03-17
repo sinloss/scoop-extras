@@ -1,21 +1,21 @@
 {
-    "homepage": "http://executor.dk/",
+    "version": "1.0.4",
     "description": "A multi purpose launcher and more advanced and customizable freeware windows run replacement and more...",
-    "version": "1.0.0",
+    "homepage": "http://executor.dk/",
     "license": "Unknown",
-    "bin": "Executor.exe",
     "architecture": {
         "64bit": {
             "url": "http://www.1space.dk/executor/Executor64bit.zip",
-            "hash": "e6a891b52fbc71ffb0febfa65096d0d6d5b6b456588331a05996f6998782ce9a",
+            "hash": "d65c28222d73c504a010db9399e5659897d93cea03956eb976561d151ef922c0",
             "extract_dir": "Executor64bit"
         },
         "32bit": {
             "url": "http://www.1space.dk/executor/Executor32bit.zip",
-            "hash": "14f5f4583c54a61fb97c1544763eaf45362aa241fd3e414070348d2af1f6432b",
+            "hash": "9cd9515d8981c07148b8253627bb1f1620f0b0224b79a89b004f9f8d320f9d9c",
             "extract_dir": "Executor32bit"
         }
     },
+    "bin": "Executor.exe",
     "checkver": {
         "url": "http://www.1space.dk/executor/vhistory.html",
         "regex": "<h3>v([\\d.b]+)\\s+\\(.*\\)</h3>"

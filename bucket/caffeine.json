@@ -1,17 +1,42 @@
 {
+    "version": "1.95",
+    "description": "Prevents PC from locking or sleep",
     "homepage": "https://www.zhornsoftware.co.uk/caffeine/index.htm",
-    "description": "Prevent PC from locking or sleep",
-    "version": "1.64",
     "license": "Freeware",
     "url": "https://www.zhornsoftware.co.uk/caffeine/caffeine.zip",
-    "hash": "838f3e826e34a3c5e1322a96035052850e5ba54bdd1d130978f4a139501632a0",
-    "bin": "caffeine.exe",
-    "shortcuts": [
-        [
-            "caffeine.exe",
-            "Caffeine"
-        ]
-    ],
+    "hash": "eab54785dbbfcdde4e1ce694676dd184b638549a5b6fdf3df5e2e344bbfebf2f",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                "caffeine64.exe",
+                [
+                    "caffeine64.exe",
+                    "caffeine"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "caffeine64.exe",
+                    "Caffeine"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                "caffeine32.exe",
+                [
+                    "caffeine32.exe",
+                    "caffeine"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "caffeine32.exe",
+                    "Caffeine"
+                ]
+            ]
+        }
+    },
     "checkver": "v([\\d.]+)\\s+-",
     "autoupdate": {
         "url": "https://www.zhornsoftware.co.uk/caffeine/caffeine.zip"

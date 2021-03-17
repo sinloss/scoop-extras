@@ -1,20 +1,20 @@
 {
-    "homepage": "https://thonny.org",
+    "version": "3.3.6",
     "description": "Python IDE for beginners",
+    "homepage": "https://thonny.org",
     "license": "MIT",
-    "version": "3.2.6",
-    "url": "https://github.com/thonny/thonny/releases/download/v3.2.6/thonny-3.2.6-windows-portable.zip",
-    "hash": "74ec06b98b205228493888ee3fb195e29f329384fd79d86b3a5e0ba9a432a0ad",
+    "url": "https://github.com/thonny/thonny/releases/download/v3.3.6/thonny-3.3.6-windows-portable.zip",
+    "hash": "91f96b872c78020627203d0829ba035b32165427b3c33b409be2e9e4e53c6e00",
     "shortcuts": [
         [
             "thonny.exe",
             "Thonny"
         ]
     ],
-    "persist": "user_data",
     "env_set": {
         "THONNY_USER_DIR": "$persist_dir\\user_data"
     },
+    "persist": "user_data",
     "checkver": {
         "github": "https://github.com/thonny/thonny"
     },

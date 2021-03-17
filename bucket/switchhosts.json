@@ -1,23 +1,19 @@
 {
+    "version": "3.5.7",
+    "description": "Hosts management & switching",
     "homepage": "https://oldj.github.io/SwitchHosts/",
-    "version": "3.5.3",
     "license": "MIT",
-    "description": "App for hosts management & switching.",
-    "url": "https://github.com/oldj/SwitchHosts/releases/download/v3.5.3/SwitchHosts._windows_installer_3.5.3.5514.exe#/dl.7z",
-    "hash": "cc56934a99423ae5904c7f800a4b775325384a96c674ad89d3ac3c331b0986f0",
+    "url": "https://github.com/oldj/SwitchHosts/releases/download/v3.5.7/SwitchHosts._windows_installer_3.5.7.5554.exe#/dl.7z",
+    "hash": "cec25bc249cbcfcb589f121d6459df973d90ec76a5101ef5edee80a3c87b9c3e",
     "architecture": {
         "64bit": {
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
-            }
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
         },
         "32bit": {
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
-            }
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse",
+    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse",
     "shortcuts": [
         [
             "SwitchHosts!.exe",

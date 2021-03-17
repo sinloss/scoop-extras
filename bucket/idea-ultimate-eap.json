@@ -1,22 +1,19 @@
 {
-    "version": "193.6015.11",
+    "version": "211.6432.7",
     "description": "Early Access Program for IntelliJ IDEA Ultimate Edition",
     "homepage": "https://www.jetbrains.com/idea/",
     "license": {
         "identifier": "Shareware",
         "url": "https://www.jetbrains.com/legal/agreements/user_eap.html"
     },
-    "url": "https://download.jetbrains.com/idea/ideaIU-193.6015.11.win.zip",
-    "hash": "9e412295e61c9835923381f46d36c3a48231e84b8930189fcd1c15ae3d6c0ae2",
-    "bin": "bin\\idea.bat",
-    "env_add_path": "bin",
-    "notes": "Please restart your command line for changes to take effect.",
+    "url": "https://download.jetbrains.com/idea/ideaIU-211.6432.7.win.zip",
+    "hash": "8fa9266396b5275b1d40153aaae6807c21cbcce3a4cca3953d5ae4046fe2c1c7",
     "architecture": {
         "64bit": {
             "bin": "bin\\idea64.exe",
             "shortcuts": [
                 [
-                    "bin/idea64.exe",
+                    "bin\\idea64.exe",
                     "IntelliJ IDEA Ultimate EAP"
                 ]
             ]
@@ -25,7 +22,7 @@
             "bin": "bin\\idea.exe",
             "shortcuts": [
                 [
-                    "bin/idea.exe",
+                    "bin\\idea.exe",
                     "IntelliJ IDEA Ultimate EAP"
                 ]
             ]
@@ -33,7 +30,7 @@
     },
     "checkver": {
         "url": "https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=eap",
-        "jp": "$..build"
+        "jsonpath": "$..build"
     },
     "autoupdate": {
         "url": "https://download.jetbrains.com/idea/ideaIU-$version.win.zip",

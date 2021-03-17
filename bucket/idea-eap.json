@@ -1,19 +1,16 @@
 {
-    "version": "193.6015.11",
+    "version": "211.6432.7",
     "description": "Early Access Program for IntelliJ IDEA Community Edition",
     "homepage": "https://www.jetbrains.com/idea/",
     "license": "Apache-2.0",
-    "url": "https://download.jetbrains.com/idea/ideaIC-193.6015.11.win.zip",
-    "hash": "711a9a3a867bcc7b8ca0310b097c134c4452d78eb1d3f88caba43266fd276a1c",
-    "bin": "bin\\idea.bat",
-    "env_add_path": "bin",
-    "notes": "Please restart your command line for changes to take effect.",
+    "url": "https://download.jetbrains.com/idea/ideaIC-211.6432.7.win.zip",
+    "hash": "e5f7a483e556dd8d76b5b9f805c37808c07b234be319976dceaa8ba7892c4ec2",
     "architecture": {
         "64bit": {
             "bin": "bin\\idea64.exe",
             "shortcuts": [
                 [
-                    "bin/idea64.exe",
+                    "bin\\idea64.exe",
                     "IntelliJ IDEA Community Edition EAP"
                 ]
             ]
@@ -22,7 +19,7 @@
             "bin": "bin\\idea.exe",
             "shortcuts": [
                 [
-                    "bin/idea.exe",
+                    "bin\\idea.exe",
                     "IntelliJ IDEA Community Edition EAP"
                 ]
             ]
@@ -30,7 +27,7 @@
     },
     "checkver": {
         "url": "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=eap",
-        "jp": "$..build"
+        "jsonpath": "$..build"
     },
     "autoupdate": {
         "url": "https://download.jetbrains.com/idea/ideaIC-$version.win.zip",

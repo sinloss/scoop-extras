@@ -1,6 +1,6 @@
 {
-    "version": "2020.01",
-    "description": "The 100% fresh, free-range, ethical browser (current branch).",
+    "version": "3.1.1.2",
+    "description": "The 100% fresh, free-range, ethical browser (current branch)",
     "homepage": "https://www.waterfox.net",
     "license": "MPL-2.0",
     "notes": [
@@ -11,8 +11,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://storage-waterfox.netdna-ssl.com/releases/win64/installer/Waterfox%20Current%202020.01%20Setup.exe#/dl.7z",
-            "hash": "b4e978746ca6695fd372d6181d0eae8c3e3b4463df11edc219a3bbed13d8467b"
+            "url": "https://cdn.waterfox.net/releases/win64/installer/Waterfox%20G3.1.1.2%20Setup.exe#/dl.7z",
+            "hash": "bcfe6638066e708c2a62059fb64b51c7525efba04afa53950031e3537715cf08"
         }
     },
     "extract_dir": "core",
@@ -24,13 +24,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://www.waterfox.net/releases/",
-        "regex": "Waterfox%20Current%20(\\d{4}\\.\\d{1,2})%20Setup.exe"
+        "url": "https://www.waterfox.net/download",
+        "regex": "/Waterfox%20G([\\d.]+)%20Setup\\.exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://storage-waterfox.netdna-ssl.com/releases/win64/installer/Waterfox%20Current%20$version%20Setup.exe#/dl.7z"
+                "url": "https://cdn.waterfox.net/releases/win64/installer/Waterfox%20G$version%20Setup.exe#/dl.7z"
             }
         }
     }

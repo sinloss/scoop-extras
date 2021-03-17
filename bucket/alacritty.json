@@ -1,10 +1,13 @@
 {
-    "homepage": "https://github.com/jwilm/alacritty",
-    "description": "A cross-platform, GPU-accelerated terminal emulator",
+    "version": "0.7.2",
+    "description": "GPU-accelerated terminal emulator",
+    "homepage": "https://github.com/alacritty/alacritty",
     "license": "Apache-2.0",
-    "version": "0.4.1",
-    "url": "https://github.com/jwilm/alacritty/releases/download/v0.4.1/Alacritty-v0.4.1-windows-portable.zip",
-    "hash": "0799fe0fda9768ad134e398871013fea1bf4e65c4e32ee57c72f1f442b1bb24a",
+    "suggest": {
+        "vcredist": "extras/vcredist2017"
+    },
+    "url": "https://github.com/alacritty/alacritty/releases/download/v0.7.2/Alacritty-v0.7.2-portable.exe#/alacritty.exe",
+    "hash": "d542ad7392f03799ea47bd4d5c83c70ad5e8551946eb21796041a0351e57a948",
     "bin": "alacritty.exe",
     "shortcuts": [
         [
@@ -15,9 +18,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/jwilm/alacritty/releases/download/v$version/Alacritty-v$version-windows-portable.zip"
-    },
-    "suggest": {
-        "vcredist": "extras/vcredist2017"
+        "url": "https://github.com/alacritty/alacritty/releases/download/v$version/Alacritty-v$version-portable.exe#/alacritty.exe"
     }
 }
